@@ -1,0 +1,346 @@
+ * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+img{border-style: none;
+    max-width: 100%;
+
+}
+html{
+    font-size: 16px;
+}
+
+body{
+    background-image: url(multimedia/textura-fondo.jpg);
+    min-width: 450px;
+    
+}
+/*-------------header-------------*/
+
+/*logo-inicio*/
+.mover-menu{
+    position: sticky;
+    top: 0px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    background-color: rgb(255, 255, 255);
+    
+}
+.logo a img{
+    transition: all 0.5s ease;
+
+}
+.logo a img:hover{
+    transform: scale(0.9);
+}   
+
+/*menu = nav*/
+
+.menu{
+    
+    background-color: rgba(0, 0, 0, 0.726);
+}
+.menu ul{
+    display: flex;
+    justify-content: center;
+    min-width: 450px;
+}
+
+
+.menu ul li{
+    list-style:none;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.5s ease;
+}
+.menu ul li:hover{
+    background-color: rgb(105, 105, 105);
+}
+.menu ul li a{
+    text-decoration: none;
+    background-color: none;
+    padding: 10px 20px;
+    display: flex;
+    color: white;
+}
+
+
+/*-----------fin de header---------------*/    
+
+/*-----------SECTION---------------*/  
+/*----articulo 1----*/ 
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 30px 20px;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 3px;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    width: 80%;
+    text-shadow: 0px 0px 20px #000000;
+}
+
+/*----articulo 2----*/ 
+
+.productos{
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 1fr 1fr 1fr;
+    grid-template-areas: "sub-titulo sub-titulo"
+                         "hombre-1 hombre-2"
+                         "infante-2 infante-1"
+                         "perfumes-1 perfumes-2";
+    justify-items: center;
+    align-items: center;
+    margin: 0px 10%;
+    margin-top: 30px;
+    row-gap: 30px;
+    padding-bottom: 50px;
+                     
+}
+
+.sub-titulo{
+    grid-area:sub-titulo;
+}
+.hombre-1{
+    grid-area:hombre-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hombre-2{
+    grid-area:hombre-2;
+}
+.infante-1{
+    grid-area:infante-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.infante-2{
+    grid-area:infante-2;
+}
+.perfumes-1{
+    grid-area:perfumes-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.perfumes-2{
+    grid-area:perfumes-2;
+    
+}
+.parrafos{
+    text-align: center;
+    padding: 30px 0px;
+    max-width: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    text-shadow: 0px 0px 20px #000000;
+}
+h2{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 80%;
+    text-shadow: 0px 0px 20px #000000;
+}
+h3{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 20px #000000;
+}
+.ver-mas{
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 0px 15px;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+    text-shadow: 0px 0px 20px #000000;
+      
+}
+
+.ver-mas:hover{
+    transform: scale(1.2,1.2);
+    background-color: rgb(109, 109, 109);
+    
+}
+.productos div img{
+    border-radius: 30px;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+/*----articulo 3----*/ 
+.ofertas-promociones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    row-gap: 50px;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 30px 20px;
+}
+
+
+/*-----------FIN DE SECTION---------------*/  
+
+
+/*----------FOOTER------------*/ 
+footer{
+    background-color: rgba(0, 0, 0, 0.726);
+    margin-top: 30px;
+}
+.medios-de-pago{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10%;
+}
+.medios-de-pago div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.medios-de-pago div img{
+    width: 70px;
+    
+}
+h4{
+    text-align: center;
+    text-transform: capitalize;
+    word-spacing: 3px;
+    font-size: 1.5rem;
+    padding: 20px 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 20px #000000;
+}
+.contactar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10%;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+.contactar div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;   
+}
+.contactar div a img {
+    width: 50px;
+}
+.derechos{
+    padding: 20px 0px;
+}
+.derechos p{
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.medios-de-pago, .contactar, .derechos{
+    margin-top: 40px;
+}
+
+/*--------FIN DE FOOTER--------*/ 
+
+
+/*--------RESPONSIVE--------*/ 
+
+@media screen and (max-width: 1200px){
+    .productos{
+        grid-template-rows: 150px 1fr 1fr 1fr;
+    }   
+    h1, h2, h4{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 920px){
+    html{
+        font-size: 14px;
+    }
+    .productos{
+        margin: 0;
+        margin-top: 30px;
+        padding-top: 10px;
+        border-radius: 0px;
+        grid-template-rows: 100px 1fr 1fr 1fr;
+
+    }
+    .ofertas-promociones{
+        margin: 0;
+        margin-top: 30px;
+        border-radius: 0px ;
+    }
+    .presentacion{
+        margin: 0;
+        margin-top: 30px;
+    }
+    .parrafos{
+        max-width: 80%;
+    }
+    .hombre-2, .infante-2, .perfumes-2{
+        padding: 0px 20px;
+    }
+       
+}
+
+@media screen and (max-width: 480px){
+    html{
+        font-size: 12px;
+    }
+    .productos{
+        border-radius: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 300px 1fr 300px 1fr 300px 1fr;
+        grid-template-areas: "sub-titulo"
+                         "hombre-1"
+                         "hombre-2"
+                         "infante-1"
+                         "infante-2"
+                         "perfumes-1"
+                         "perfumes-2";
+        gap: 0px;
+        
+    }
+    .parrafos, h1, h2, h4{
+        width: 100%;
+    }
+    .productos div img{
+        border-radius: 0px;
+        border: 0px;
+    }
+    
+}

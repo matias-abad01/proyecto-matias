@@ -1,0 +1,99 @@
+/*-----section 1-----*/
+.hombre-ofertas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 30px 20px;
+}
+
+/*-----section 2-----*/
+.mover-menu{
+    z-index: 2;
+}
+.categorias-hombres{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px repeat(4, 250px);
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0px 40px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.726);
+    
+    
+}
+
+
+.categorias-hombres .item-anim{
+    transition: all 0.5s ease;
+    
+}
+.categorias-hombres .item-anim:hover{
+    transform: scale(0.9);
+}
+.item-anim p{
+    text-shadow: 0px 0px 20px #000000;
+}
+.subtitulo-hombres{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.categorias-hombres div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(0, 0, 0);
+
+}
+.categorias-hombres .subtitulo-hombres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(0, 0, 0, 0);
+}
+.categorias-hombres div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.categorias-hombres div p{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-transform:capitalize;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 920px){
+    .categorias-hombres{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px repeat(6, 250px);
+
+    }
+    .subtitulo-hombres{
+        grid-column-start: 1;
+        grid-column-end: 3;  
+    } 
+}
+
+@media screen and (max-width: 480px){
+    .categorias-hombres{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px repeat(4, 150px);
+        padding: 0px 10px;
+        padding-bottom: 40px;
+        gap: 10px;
+    } 
+}
