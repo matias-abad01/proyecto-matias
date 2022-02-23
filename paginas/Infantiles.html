@@ -35,7 +35,7 @@
     </header>
     <!-- fin de Header-->
     <main>
-        <section>
+        <section class="section-1">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -66,7 +66,7 @@
               </div>
         </section>
         <!--section 2  -->
-        <section class="my-4 py-5 bg-dark bg-opacity-75 ">
+        <section class="section-2 my-4 py-5">
             <div class="card-group mx-3">
                 <div class="card mx-4">
                   <img src="../multimedia/infante-ropa.jpg" class="card-img-top" alt="...">
@@ -76,7 +76,7 @@
                     <a href="#" class="btn btn-primary">VER MÁS</a>
                   </div>
                 </div>
-                <div class="card mx-4">
+                <div class="card mx-4 ">
                   <img src="../multimedia/infante-bebes.jpg" class="card-img-top" alt="...">
                   <div class="card-body d-flex flex-column justify-content-center">
                     <h5 class="card-title text-center">BEBES</h5>
@@ -96,31 +96,36 @@
         </section>    
        
     </main>
-    <!--footer-->
-    <footer>
-        <!--division 1: medios de pago-->
-        <div class="medios-de-pago">
-            <h4>medios de pago:</h4>
-            <div>
-                <img src="../multimedia/paypal.png" alt="medios-de-pago">
-                <img src="../multimedia/visa.png" alt="medios-de-pago">
-                <img src="../multimedia/mastercard.png" alt="medios-de-pago">
-                <img src="../multimedia/pagofacil.png" alt="medios-de-pago">
-            </div>
+    <footer class="contactar text-center text-white" id="contacto">
+      <!-- medios de pago -->
+      
+      <div class="medios-de-pago container text-center p-4 pb-0">
+        <h4>medios de pago</h4>
+        <div class="mb-4">    
+          <img src="../multimedia/paypal.png" alt="medios-de-pago" width="50px">     
+          <img src="../multimedia/visa.png" alt="medios-de-pago" width="50px">
+          <img src="../multimedia/mastercard.png" alt="medios-de-pago" width="50px">
+          <img src="../multimedia/pagofacil.png" alt="medios-de-pago" width="50px">
         </div>
-        <!--division 2: Contacto-->
-        <div id="contacto" class="contactar">
-            <h4>comunicate con nosotros por nuestras redes sociales:</h4>
-            <div>
-                <a href="https://web.whatsapp.com/" target="_blank"><img src="../multimedia/whatsapp.png" alt="whatsapp"></a>
-                <a href="https://www.facebook.com" target="_blank"><img src="../multimedia/facebook.png" alt="facebook"></a>
-                <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img src="../multimedia/instagram.png" alt="instagram"></a>
-            </div>
+      </div>
+
+      <!-- redes sociales -->
+      <div class="redes-sociales container text-center p-4 pb-0">
+        <h4>Nuestras redes sociales</h4>
+        <div class="mb-4"> 
+          <a href="https://web.whatsapp.com/" target="_blank">
+          <img src="../multimedia/whatsapp.png" alt="whatsapp"></a>      
+          <a href="https://www.instagram.com/?hl=es-la" target="_blank">
+          <img src="../multimedia/instagram.png" alt="instagram"></a>
+          <a href="https://www.facebook.com" target="_blank">
+          <img src="../multimedia/facebook.png" alt="facebook"></a>
         </div>
-        <!--division 3: Derechos Reservados-->
-        <div class="derechos">
-            <p><span>© Shopmen 2022 . Todos los derechos reservados.</span></p>
-        </div>
+      </div>
+      
+      <!--Derechos Reservados-->         
+      <div class="derechos text-center p-3">
+        © Shopmen 2022 . Todos los derechos reservados.
+      </div>
     </footer>
     <!--fin de footer-->
     <!-- Option 1: Bootstrap Bundle with Popper -->

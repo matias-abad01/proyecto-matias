@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: 'Cabin', sans-serif;
 }
+*::selection{
+    background-color: rgba(165, 164, 164, 0.76);
+}
+
 img{border-style: none;
     max-width: 100%;
 
@@ -17,12 +21,18 @@ body{
     min-width: 450px;
     
 }
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
 /*-------------header-------------*/
 
 /*logo-inicio*/
 .mover-menu{
     position: sticky;
     top: 0px;
+    z-index: 2;
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 .logo{
     display: flex;
@@ -61,13 +71,21 @@ body{
 .menu ul li:hover{
     background-color: rgb(105, 105, 105);
 }
+.menu ul li:active{
+    background-color: #cab56f;
+}
 .menu ul li a{
     text-decoration: none;
     background-color: none;
     padding: 10px 20px;
     display: flex;
     color: white;
+    transition: all 0.5s ease;
 }
+.menu ul li a:hover{
+    transform: scale(1.1,1.1);
+}
+
 
 
 /*-----------fin de header---------------*/    
@@ -77,18 +95,29 @@ body{
 .section1{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
-    margin-top: 30px;
+    margin-top: 0px;
     background-color: rgba(0, 0, 0, 0.726);
-    padding: 30px 20px;
+    
+    position: relative;
 }
+.section1 img{
+    width: 100%;
+
+    object-fit: cover;
+}
+.section1 h1{
+    position: absolute;
+} 
 h1{
     text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
     word-spacing: 3px;
-    font-size: 2rem;
+    font-size: 3rem;
+    padding-top: 50px;
     color: rgb(255, 255, 255);
     width: 80%;
     text-shadow: 0px 0px 20px #000000;
@@ -99,7 +128,7 @@ h1{
 .productos{
     display: grid;
     background-color: rgba(0, 0, 0, 0.726);
-    border-radius: 30px;
+    
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 200px 1fr 1fr 1fr;
     grid-template-areas: "sub-titulo sub-titulo"
@@ -108,10 +137,11 @@ h1{
                          "perfumes-1 perfumes-2";
     justify-items: center;
     align-items: center;
-    margin: 0px 10%;
-    margin-top: 30px;
+    
+    margin-top: 0px;
     row-gap: 30px;
     padding-bottom: 50px;
+    border-top: 1px solid rgb(255, 255, 255);
                      
 }
 
@@ -124,6 +154,9 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    
+    
 }
 .hombre-2{
     grid-area:hombre-2;
@@ -165,6 +198,7 @@ h2{
     text-align: center;
     width: 80%;
     text-shadow: 0px 0px 20px #000000;
+    
 }
 h3{
     font-size: 2rem;
@@ -188,8 +222,12 @@ h3{
 
 .ver-mas:hover{
     transform: scale(1.2,1.2);
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(150, 149, 149);
+    color: #000000;
     
+}
+.ver-mas:active{
+    background-color: #cab56f;
 }
 .productos div img{
     border-radius: 30px;
@@ -202,11 +240,13 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 0px;
     row-gap: 50px;
     background-color: rgba(0, 0, 0, 0.726);
     padding: 30px 20px;
+    border-top: 1px solid rgb(255, 255, 255);
 }
+
 
 
 /*-----------FIN DE SECTION---------------*/  
@@ -214,25 +254,9 @@ h3{
 
 /*----------FOOTER------------*/ 
 footer{
-    background-color: rgba(0, 0, 0, 0.726);
-    margin-top: 30px;
-}
-.medios-de-pago{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 10%;
-}
-.medios-de-pago div{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10px;
-}
-.medios-de-pago div img{
-    width: 70px;
+    background-color: rgba(58, 58, 58, 0.726);
+    margin-top: 0px;
+    border-top: 1px solid rgb(255, 255, 255);
     
 }
 h4{
@@ -244,35 +268,17 @@ h4{
     color: rgb(255, 255, 255);
     text-shadow: 0px 0px 20px #000000;
 }
-.contactar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 10%;
+.contactar .redes-sociales{
     border-top: 1px solid rgb(255, 255, 255);
 }
-.contactar div{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 60px;   
+.contactar .redes-sociales div img{
+    width: 40px;
+    margin: 0px 5px;
+    
 }
-.contactar div a img {
-    width: 50px;
+.contactar .derechos{
+    background-color: #000000;
 }
-.derechos{
-    padding: 20px 0px;
-}
-.derechos p{
-    font-size: 0.9rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-.medios-de-pago, .contactar, .derechos{
-    margin-top: 40px;
-}
-
 /*--------FIN DE FOOTER--------*/ 
 
 
@@ -282,7 +288,7 @@ h4{
     .productos{
         grid-template-rows: 150px 1fr 1fr 1fr;
     }   
-    h1, h2, h4{
+    h1, h2{
         width: 90%;
     }
 }
@@ -291,9 +297,12 @@ h4{
     html{
         font-size: 14px;
     }
+    h1{
+        font-size: 2rem;
+        padding-top: 20px;
+    }
     .productos{
         margin: 0;
-        margin-top: 30px;
         padding-top: 10px;
         border-radius: 0px;
         grid-template-rows: 100px 1fr 1fr 1fr;
@@ -301,12 +310,10 @@ h4{
     }
     .ofertas-promociones{
         margin: 0;
-        margin-top: 30px;
         border-radius: 0px ;
     }
     .presentacion{
         margin: 0;
-        margin-top: 30px;
     }
     .parrafos{
         max-width: 80%;
@@ -321,6 +328,7 @@ h4{
     html{
         font-size: 12px;
     }
+    
     .productos{
         border-radius: 0px;
         grid-template-columns: 1fr;
@@ -335,7 +343,7 @@ h4{
         gap: 0px;
         
     }
-    .parrafos, h1, h2, h4{
+    .parrafos, h1, h2{
         width: 100%;
     }
     .productos div img{

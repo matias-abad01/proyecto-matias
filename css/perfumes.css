@@ -1,6 +1,10 @@
 .mover-menu{
     z-index: 2;
 }
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
 
 h5{
     text-transform: capitalize;
@@ -17,4 +21,17 @@ h5{
 
 .parrafo-section{
     color: rgb(255, 255, 255);
+}
+
+.container .row .col{
+    background-color: rgba(0, 0, 0, 0.562); 
+    transition: all 0.5s ease;
+}
+
+.container .row .col:hover{
+    background-color: rgb(119, 119, 119);
+}
+
+.container .row .col:active{
+    background-color: #cab56f;
 }
