@@ -1,0 +1,320 @@
+/*-------general-----*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+html body {
+  background-image: url(../multimedia/textura-fondo.jpg);
+  min-width: 480px;
+  width: 100%;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+/*logo-inicio*/
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+  background-color: white;
+}
+.logo a img {
+  transition: all 0.5s ease;
+}
+.logo a img:hover {
+  transform: scale(0.9);
+}
+
+/*menu = nav*/
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  border-bottom: 2px solid white;
+}
+header .menu {
+  background-color: rgba(0, 0, 0, 0.726);
+}
+header .menu ul {
+  display: flex;
+  justify-content: center;
+  min-width: 480px;
+}
+header .menu ul li {
+  list-style: none;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.5s ease;
+}
+header .menu ul li:hover {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+header .menu ul li:active {
+  background-color: #5f5f5f;
+}
+header .menu ul li a {
+  text-decoration: none;
+  background-color: none;
+  padding: 10px 20px;
+  display: flex;
+  color: white;
+  transition: all 0.5s ease;
+}
+header .menu ul li a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/*----main----*/
+/*----articulo 1----*/
+.presentacion-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  margin-top: 0px;
+  background-color: rgba(0, 0, 0, 0.726);
+  position: relative;
+}
+.presentacion-1 h1 {
+  position: absolute;
+}
+.presentacion-1 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  word-spacing: 3px;
+  font-size: 3rem;
+  padding-top: 50px;
+  color: white;
+  width: 80%;
+  text-shadow: 0px 0px 20px #000000;
+}
+
+/*----articulo 2----*/
+.productos {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.726);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 1fr 1fr 1fr;
+  grid-template-areas: "sub-titulo sub-titulo" "hombre-1 hombre-2" "infante-2 infante-1" "perfumes-1 perfumes-2";
+  justify-items: center;
+  align-items: center;
+  margin-top: 0px;
+  row-gap: 30px;
+  padding-bottom: 50px;
+  border-top: 1px solid white;
+}
+.productos div img {
+  border-radius: 30px;
+  border: 5px solid black;
+}
+.productos div .parrafos {
+  text-align: center;
+  padding: 30px 0px;
+  max-width: 50%;
+  color: white;
+  font-size: 1.2em;
+  text-shadow: 0px 0px 20px #000000;
+}
+.productos div .ver-mas {
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  color: white;
+  background-color: black;
+  padding: 0px 15px;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+  text-shadow: 0px 0px 20px #000000;
+}
+.productos div .ver-mas:hover {
+  transform: scale(1.2, 1.2);
+  border: 1px solid white;
+}
+.productos div .ver-mas:active {
+  background-color: #5f5f5f;
+}
+.productos .sub-titulo {
+  grid-area: sub-titulo;
+}
+.productos .hombre-1 {
+  grid-area: hombre-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.productos .hombre-2 {
+  grid-area: hombre-2;
+}
+.productos .infante-1 {
+  grid-area: infante-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.productos .infante-2 {
+  grid-area: infante-2;
+}
+.productos .perfumes-1 {
+  grid-area: perfumes-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.productos .perfumes-2 {
+  grid-area: perfumes-2;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  width: 80%;
+  text-shadow: 0px 0px 20px #000000;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0px 0px 20px #000000;
+}
+
+/*----articulo 3----*/
+.ofertas-promociones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  row-gap: 50px;
+  background-color: rgba(0, 0, 0, 0.726);
+  padding: 30px 20px;
+  border-top: 1px solid white;
+}
+
+/*-----footer----*/
+footer {
+  background-color: rgba(58, 58, 58, 0.726);
+  margin-top: 0px;
+  border-top: 1px solid white;
+}
+footer div h4 {
+  text-align: center;
+  text-transform: capitalize;
+  word-spacing: 3px;
+  font-size: 1.5rem;
+  padding: 20px 0px;
+  color: white;
+  text-shadow: 0px 0px 20px #000000;
+}
+footer .redes-sociales {
+  border-top: 1px solid white;
+}
+footer .redes-sociales div img {
+  width: 40px;
+  margin: 0px 5px;
+}
+footer .derechos {
+  background-color: #000000;
+}
+
+/*--------RESPONSIVE--------*/
+@media screen and (max-width: 1200px) {
+  .productos {
+    grid-template-rows: 150px 1fr 1fr 1fr;
+  }
+
+  h1, h2 {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 920px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+
+  .productos {
+    margin: 0;
+    padding-top: 10px;
+    border-radius: 0px;
+    grid-template-rows: 100px 1fr 1fr 1fr;
+  }
+
+  .ofertas-promociones {
+    margin: 0;
+    border-radius: 0px;
+  }
+
+  .presentacion {
+    margin: 0;
+  }
+
+  .parrafos {
+    max-width: 100%;
+  }
+
+  .hombre-2, .infante-2, .perfumes-2 {
+    padding: 0px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .productos {
+    border-radius: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px 1fr 300px 1fr 300px 1fr;
+    grid-template-areas: "sub-titulo" "hombre-1" "hombre-2" "infante-1" "infante-2" "perfumes-1" "perfumes-2";
+    gap: 0px;
+  }
+
+  .parrafos, h1, h2 {
+    width: 100%;
+  }
+
+  h2 {
+    padding: 0px 10px;
+  }
+
+  .productos div img {
+    border-radius: 0px;
+    border: 0px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -28,7 +28,7 @@ dl, ol, ul {
 /*-------------header-------------*/
 
 /*logo-inicio*/
-.mover-menu{
+header{
     position: sticky;
     top: 0px;
     z-index: 2;
@@ -92,7 +92,7 @@ dl, ol, ul {
 
 /*-----------SECTION---------------*/  
 /*----articulo 1----*/ 
-.section1{
+.presentacion-1{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -103,12 +103,12 @@ dl, ol, ul {
     
     position: relative;
 }
-.section1 img{
+.presentacion-1 img{
     width: 100%;
 
     object-fit: cover;
 }
-.section1 h1{
+.presentacion-1 h1{
     position: absolute;
 } 
 h1{

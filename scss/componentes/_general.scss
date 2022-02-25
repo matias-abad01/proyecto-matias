@@ -1,0 +1,30 @@
+/*-------general-----*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    
+}
+
+img{
+    border-style: none;
+    max-width: 100%;
+
+}
+html{
+    font-size: 16px;
+    body{
+        background-image: url(../multimedia/textura-fondo.jpg);
+        min-width: 480px;
+        width: 100%;
+        
+    }
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+
