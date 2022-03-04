@@ -1,3 +1,5 @@
+@import "../base/variables";
+@import "../base/extends";
 /*-----footer----*/
 footer{
     background-color: rgba(58, 58, 58, 0.726);
@@ -5,13 +7,11 @@ footer{
     border-top: 1px solid rgb(255, 255, 255);
     div{
         h4{
-            text-align: center;
-            text-transform: capitalize;
+            @extend %titulos-pequeños;
             word-spacing: 3px;
-            font-size: 1.5rem;
             padding: 20px 0px;
             color: $color-texto;
-            text-shadow: 0px 0px 20px #000000;
+            text-shadow: $sombra-texto;
 
         }
     }

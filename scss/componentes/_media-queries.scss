@@ -4,19 +4,13 @@
     .productos{
         grid-template-rows: 150px 1fr 1fr 1fr;
     }   
-    h1, h2{
-        width: 90%;
-    }
 }
 
 @media screen and (max-width: 920px){
     html{
         font-size: 14px;
     }
-    h1{
-        font-size: 2rem;
-        padding-top: 20px;
-    }
+    
     .productos{
         margin: 0;
         padding-top: 10px;
@@ -59,15 +53,75 @@
         gap: 0px;
         
     }
-    .parrafos, h1, h2{
+    .parrafos, h1{
         width: 100%;
     }
-    h2{
-        padding: 0px 10px;
-    }
+   
     .productos div img{
         border-radius: 0px;
         border: 0px;
     }
     
+}
+
+/*nav */
+
+
+@media screen and (max-width: 750px){
+    .menu-logo{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .menu-logo a img{
+        max-width: 200px;
+       
+    
+    }
+   
+    
+
+
+}
+    
+@media screen and (max-width: 505px){
+    header{
+        position: relative;
+    }
+    header .contenedor{
+        margin: 0px 0px;
+        width: 100%;
+    }
+    .menu-logo{
+        gap: 20px ;
+        
+    
+    }
+    .menu-logo a img{
+        max-width: 250px;
+    }
+
+    .navegador ul{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 100%;
+        width: 100%;
+        gap: 10px;
+    }
+    .navegador ul li:hover{
+        border-left: 0px solid $hover-border;
+        border-right: 0px solid $hover-border;
+       
+        
+       
+    }
+
+
 }

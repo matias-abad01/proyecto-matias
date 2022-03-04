@@ -4,8 +4,12 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Cabin', sans-serif;
+    &::selection{
+        background-color: rgba(165, 164, 164, 0.76);
+    }
     
 }
+
 
 img{
     border-style: none;

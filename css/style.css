@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: "Cabin", sans-serif;
 }
+*::selection {
+  background-color: rgba(165, 164, 164, 0.76);
+}
 
 img {
   border-style: none;
@@ -25,58 +28,90 @@ dl, ol, ul {
   margin-bottom: 0rem;
 }
 
-/*logo-inicio*/
-.logo {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0px;
-  background-color: white;
-}
-.logo a img {
-  transition: all 0.5s ease;
-}
-.logo a img:hover {
-  transform: scale(0.9);
-}
-
 /*menu = nav*/
 header {
   position: sticky;
   top: 0px;
   z-index: 2;
-  border-bottom: 2px solid white;
-}
-header .menu {
+  border-bottom: 1px solid white;
   background-color: rgba(0, 0, 0, 0.726);
+  padding: 0.5rem 0px;
 }
-header .menu ul {
+header a {
+  text-decoration: none;
+}
+header .contenedor {
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+header .menu-logo {
   display: flex;
-  justify-content: center;
-  min-width: 480px;
+  justify-content: space-between;
+  align-items: center;
 }
-header .menu ul li {
+header .menu-logo a img {
+  max-width: 150px;
+}
+header .menu-logo .navegador {
+  display: flex;
+  justify-content: space-around;
+}
+header .menu-logo .navegador ul {
   list-style: none;
-  justify-content: center;
-  font-size: 1.1rem;
+  padding: 0px;
+}
+header .menu-logo .navegador ul li {
+  display: inline-block;
   transition: all 0.5s ease;
 }
-header .menu ul li:hover {
+header .menu-logo .navegador ul li:hover {
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
-header .menu ul li:active {
+header .menu-logo .navegador ul li:active {
   background-color: #5f5f5f;
 }
-header .menu ul li a {
-  text-decoration: none;
-  background-color: none;
-  padding: 10px 20px;
-  display: flex;
+@media screen and (max-width: 505px) {
+  header .menu-logo .navegador ul li:hover {
+    border: 0px;
+  }
+}
+header .menu-logo .navegador ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
   color: white;
   transition: all 0.5s ease;
 }
-header .menu ul li a:hover {
+header .menu-logo .navegador ul li a:hover {
   transform: scale(1.1, 1.1);
+}
+
+.ofertas-promociones, .productos .perfumes-1, .productos .infante-1, .productos .hombre-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2, h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer div h4, h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.presentacion-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*----main----*/
@@ -88,27 +123,39 @@ header .menu ul li a:hover {
   align-items: center;
   gap: 50px;
   margin-top: 0px;
-  background-color: rgba(0, 0, 0, 0.726);
   position: relative;
+  height: 500px;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 750px) {
+  .presentacion-1 {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 505px) {
+  .presentacion-1 {
+    height: 300px;
+  }
 }
 .presentacion-1 h1 {
   position: absolute;
 }
-.presentacion-1 img {
-  width: 100%;
-  object-fit: cover;
-}
-
 h1 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
   word-spacing: 3px;
-  font-size: 3rem;
-  padding-top: 50px;
+  padding-top: 30px;
   color: white;
   width: 80%;
   text-shadow: 0px 0px 20px #000000;
+}
+@media screen and (max-width: 750px) {
+  h1 {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 505px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 /*----articulo 2----*/
@@ -127,7 +174,7 @@ h1 {
 }
 .productos div img {
   border-radius: 30px;
-  border: 5px solid black;
+  border: 2px solid white;
 }
 .productos div .parrafos {
   text-align: center;
@@ -160,64 +207,78 @@ h1 {
 }
 .productos .hombre-1 {
   grid-area: hombre-1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .productos .hombre-2 {
   grid-area: hombre-2;
 }
 .productos .infante-1 {
   grid-area: infante-1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .productos .infante-2 {
   grid-area: infante-2;
 }
 .productos .perfumes-1 {
   grid-area: perfumes-1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .productos .perfumes-2 {
   grid-area: perfumes-2;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: bolder;
-  text-transform: uppercase;
   color: white;
-  text-align: center;
   width: 80%;
   text-shadow: 0px 0px 20px #000000;
 }
+@media screen and (max-width: 750px) {
+  h2 {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 505px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
 
 h3 {
-  font-size: 2rem;
-  font-weight: bolder;
-  text-transform: uppercase;
   color: white;
   text-shadow: 0px 0px 20px #000000;
 }
 
 /*----articulo 3----*/
 .ofertas-promociones {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 0px;
   row-gap: 50px;
   background-color: rgba(0, 0, 0, 0.726);
   padding: 30px 20px;
   border-top: 1px solid white;
+}
+
+.productos .hombre-1, .productos .infante-1, .productos .perfumes-1, .ofertas-promociones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer div h4, h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.presentacion-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*-----footer----*/
@@ -227,10 +288,7 @@ footer {
   border-top: 1px solid white;
 }
 footer div h4 {
-  text-align: center;
-  text-transform: capitalize;
   word-spacing: 3px;
-  font-size: 1.5rem;
   padding: 20px 0px;
   color: white;
   text-shadow: 0px 0px 20px #000000;
@@ -251,19 +309,10 @@ footer .derechos {
   .productos {
     grid-template-rows: 150px 1fr 1fr 1fr;
   }
-
-  h1, h2 {
-    width: 90%;
-  }
 }
 @media screen and (max-width: 920px) {
   html {
     font-size: 14px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    padding-top: 20px;
   }
 
   .productos {
@@ -303,17 +352,61 @@ footer .derechos {
     gap: 0px;
   }
 
-  .parrafos, h1, h2 {
+  .parrafos, h1 {
     width: 100%;
-  }
-
-  h2 {
-    padding: 0px 10px;
   }
 
   .productos div img {
     border-radius: 0px;
     border: 0px;
+  }
+}
+/*nav */
+@media screen and (max-width: 750px) {
+  .menu-logo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-logo a img {
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 505px) {
+  header {
+    position: relative;
+  }
+
+  header .contenedor {
+    margin: 0px 0px;
+    width: 100%;
+  }
+
+  .menu-logo {
+    gap: 20px;
+  }
+
+  .menu-logo a img {
+    max-width: 250px;
+  }
+
+  .navegador ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100%;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .navegador ul li:hover {
+    border-left: 0px solid white;
+    border-right: 0px solid white;
   }
 }
 

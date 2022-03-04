@@ -1,0 +1,27 @@
+%flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+%titulos{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+%titulos-pequeños{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
+%encajar-imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

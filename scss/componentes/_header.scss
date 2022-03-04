@@ -1,20 +1,6 @@
 @import "../base/variables";
-/*logo-inicio*/
-.logo{
-    display: flex;
-    justify-content: center;
-    padding: 20px 0px;
-    background-color: rgb(255, 255, 255);
-      a{
-        img{
-            transition: all 0.5s ease;
-            &:hover{
-                transform: scale(0.9);
-            }
 
-        }
-    }
-}
+
 
 /*menu = nav*/
 
@@ -22,17 +8,35 @@ header{
     position: sticky;
     top: 0px;
     z-index: 2;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    .menu{
-        background-color: rgba(0, 0, 0, 0.726);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 0.5rem 0px;
+    a{
+      text-decoration: none;
+
+    }
+    .contenedor{
+      width: 85%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .menu-logo{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a{
+        img{
+          max-width: 150px;
+        }
+      }
+      .navegador{
+        display: flex;
+        justify-content: space-around;
         ul{
-           display: flex;
-           justify-content: center;
-           min-width: 480px;
+          list-style: none;
+          padding: 0px;
             li{
-              list-style:none;
-              justify-content: center;
-              font-size: 1.1rem;
+              display: inline-block;
               transition: all 0.5s ease;
               &:hover{
                 border-left: 1px solid $hover-border;
@@ -41,19 +45,26 @@ header{
               &:active{
                 background-color: $active-background;
               }
+              @media screen and (max-width: 505px){
+                &:hover{
+                  border: 0px;
+                }
+                
+              }
                 a{
-                 text-decoration: none;
-                 background-color: none;
-                 padding: 10px 20px;
-                 display: flex;
+                 display: block;
+                 padding: 0.5rem 1rem;
                  color: $color-texto;
                  transition: all 0.5s ease;
                  &:hover{
                     transform: scale(1.1,1.1);
-                 }
+                  }
+                   
+                 
 
                 }
             }
-        }
+         }
+      }
     }
 }
