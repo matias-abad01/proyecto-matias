@@ -1,4 +1,7 @@
 @import "../base/variables";
+@import "../base/mixins";
+@import "../base/maps";
+
 
 
 
@@ -8,8 +11,8 @@ header{
     position: sticky;
     top: 0px;
     z-index: 2;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.726);
+    border-bottom: map-get($header, border-bottomm);
+    background-color: map-get($header, header-fondo);
     padding: 0.5rem 0px;
     a{
       text-decoration: none;
@@ -21,17 +24,14 @@ header{
       margin: 0 auto;
     }
     .menu-logo{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex(flex, space-between, center);
       a{
         img{
           max-width: 150px;
         }
       }
       .navegador{
-        display: flex;
-        justify-content: space-around;
+        @include flex(flex, space-around, center);
         ul{
           list-style: none;
           padding: 0px;

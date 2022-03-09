@@ -1,10 +1,13 @@
 @import "../base/variables";
 @import "../base/extends";
+@import "../base/maps";
+@import "../base/listas";
+
 /*-----footer----*/
 footer{
-    background-color: rgba(58, 58, 58, 0.726);
+    background-color: map-get($footer,  footer-fondo);
     margin-top: 0px;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: map-get($footer, border-top);
     div{
         h4{
             @extend %titulos-pequeños;
@@ -16,7 +19,7 @@ footer{
         }
     }
     .redes-sociales{
-        border-top: 1px solid rgb(255, 255, 255);
+        border-top: 1px solid nth($colores, 2);
         div{
             img{
                 width: 40px;
@@ -25,7 +28,7 @@ footer{
         }
     }
     .derechos{
-        background-color: #000000;
+        background-color: nth($colores, 1);
     }
 
 }

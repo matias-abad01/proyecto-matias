@@ -1,14 +1,15 @@
 @import "../base/variables";
 @import "../base/extends";
+@import "../base/maps";
+@import "../base/mixins";
+@import "../base/listas";
 
 
 /*----main----*/
 /*----articulo 1----*/
 .presentacion-1{
-    display: flex;
+    @include flex(flex, flex-start, center);
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     gap: 50px;
     margin-top: 0px;
     position: relative;
@@ -48,7 +49,8 @@ h1{
 /*----articulo 2----*/ 
 .productos{
     display: grid;
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: map-get($main, section-fondo);
+    border-top: map-get($main, border-top);
     
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 200px 1fr 1fr 1fr;
@@ -62,13 +64,13 @@ h1{
     margin-top: 0px;
     row-gap: 30px;
     padding-bottom: 50px;
-    border-top: 1px solid rgb(255, 255, 255);
+    
     
 
     div{
         img{
             border-radius: 30px;
-            border: 2px solid rgb(255, 255, 255);
+            border: map-get($main, border-img);
 
         }
         .parrafos{
@@ -76,15 +78,15 @@ h1{
             padding: 30px 0px;
             max-width: 50%;
             color: $color-texto;
-            font-size: 1.2em;
+            font-size: nth($font-size, 1);
             text-shadow: $sombra-texto;
         }
         .ver-mas{
-            font-size: 1.5rem;
+            font-size: nth($font-size, 2);
             text-decoration: none;
             border-radius: 30px;
             color: $color-texto;
-            background-color: rgb(0, 0, 0);
+            background-color: nth($colores, 1);
             padding: 0px 15px;
             margin-top: 10px;
             transition: all 0.5s ease;
@@ -152,7 +154,7 @@ h3{
     @extend %flex-center;
     margin-top: 0px;
     row-gap: 50px;
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: map-get($main, section-fondo);
     padding: 30px 20px;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid nth($colores, 2);
 }
