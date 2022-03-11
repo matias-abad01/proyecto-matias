@@ -6,7 +6,7 @@
 /*-----footer----*/
 footer{
     background-color: map-get($footer,  footer-fondo);
-    margin-top: 0px;
+    
     border-top: map-get($footer, border-top);
     div{
         h4{

@@ -7,154 +7,203 @@
 
 /*----main----*/
 /*----articulo 1----*/
-.presentacion-1{
-    @include flex(flex, flex-start, center);
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 0px;
-    position: relative;
-    height: 500px;
-    transition: all 0.5s ease;
-    @media screen and (max-width: 750px){
-        height: 400px;
-    }
-    @media screen and (max-width: 505px){
-        height: 300px;
-    }
-
-    h1{
-        position: absolute;
-
-    }
-    img{
-        @extend %encajar-imagen
-    }
-}
-h1{
-    @extend %titulos;
-    word-spacing: 3px;
-    padding-top: 30px;
-    color: $color-texto;
-    width: 80%;
-    text-shadow: $sombra-texto;
-    @media screen and (max-width: 750px){
-        width: 90%;
-    }
-    @media screen and (max-width: 505px){
-        font-size: 1.5rem;
-    }
-
-}
-
-/*----articulo 2----*/ 
-.productos{
-    display: grid;
-    background-color: map-get($main, section-fondo);
-    border-top: map-get($main, border-top);
-    
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 200px 1fr 1fr 1fr;
-    grid-template-areas: "sub-titulo sub-titulo"
-                         "hombre-1 hombre-2"
-                         "infante-2 infante-1"
-                         "perfumes-1 perfumes-2";
-    justify-items: center;
-    align-items: center;
-    
-    margin-top: 0px;
-    row-gap: 30px;
-    padding-bottom: 50px;
+main{
+    background-color: rgba(0, 0, 0, 0.726);
     
     
 
-    div{
-        img{
-            border-radius: 30px;
-            border: map-get($main, border-img);
-
-        }
-        .parrafos{
-            text-align: center;
-            padding: 30px 0px;
-            max-width: 50%;
-            color: $color-texto;
-            font-size: nth($font-size, 1);
-            text-shadow: $sombra-texto;
-        }
-        .ver-mas{
-            font-size: nth($font-size, 2);
-            text-decoration: none;
-            border-radius: 30px;
-            color: $color-texto;
-            background-color: nth($colores, 1);
-            padding: 0px 15px;
-            margin-top: 10px;
+        .presentacion-1{
+            @include flex(flex, flex-start, center);
+            flex-direction: column;
+            gap: 50px;
+            
+            position: relative;
+            height: 500px;
             transition: all 0.5s ease;
-            text-shadow: $sombra-texto;
-            &:hover{
-                transform: scale(1.2,1.2);
-                border: 1px solid $hover-border;      
+            border-bottom: map-get($main, border-bottomm);
+            @media screen and (max-width: 750px){
+                height: 400px;
             }
-            &:active{
-                background-color: $active-background;
+            @media screen and (max-width: 505px){
+                height: 300px;
+            }
+
+            h1{
+                position: absolute;
+
+            }
+            img{
+                @extend %encajar-imagen
             }
         }
-    }
+        h1{
+            @extend %titulos;
+            word-spacing: 3px;
+            padding-top: 30px;
+            color: $color-texto;
+            width: 80%;
+            text-shadow: $sombra-texto;
+            @media screen and (max-width: 750px){
+                width: 90%;
+            }
+            @media screen and (max-width: 505px){
+                font-size: 1.5rem;
+            }
 
-    .sub-titulo{
-        grid-area:sub-titulo;
-    }
-    .hombre-1{
-        grid-area:hombre-1;
-        @extend %flex-center;
-              
-    }
-    .hombre-2{
-        grid-area:hombre-2;
-    }
-    .infante-1{
-        grid-area:infante-1;
-        @extend %flex-center;
-    }
-    .infante-2{
-        grid-area:infante-2;
-    }
-    .perfumes-1{
-        grid-area:perfumes-1;
-        @extend %flex-center;
-    }
-    .perfumes-2{
-        grid-area:perfumes-2;
-    }
+        }
+
+        /*----articulo 2----*/ 
+        .productos{
+            
+            background-color: map-get($main, section-fondo);
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            border-radius: 30px;
+        
+            .hombres{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                
+                
+                .hombre-1{
+                    @extend %flex-center;      
+                }
+                .hombre-2{
+                    @extend %flex-center;
+
+                }
+
+            }
+            .infantes{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                .infante-1{
+                    @extend %flex-center;
+                    order: 2;
+                }
+                .infante-2{
+                    @extend %flex-center;
+                    order: 1;
+
+                }
+
+            }
+            .perfumes{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                .perfumes-1{
+                    @extend %flex-center;
+                }
+                .perfumes-2{
+                    @extend %flex-center;
+
+                }
+
+            }
+            
+            div{
+                div{
+                    img{
+                        border-radius: 30px;
+                        border: map-get($main, border-img);
+                        
+
+                    }
+                    .parrafos{
+                        text-align: center;
+                        padding: 30px 0px;
+                    
+                        color: $color-texto;
+                        font-size: nth($font-size, 1);
+                        text-shadow: $sombra-texto;
+                    }
+                    .ver-mas{
+                        font-size: nth($font-size, 1);
+                        text-decoration: none;
+                        border-radius: 30px;
+                        color: $color-texto;
+                        background-color: nth($colores, 1);
+                        padding: 10px 20px;
+                        margin-top: 10px;
+                        transition: all 0.5s ease;
+                        text-shadow: $sombra-texto;
+                        &:hover{
+                            transform: scale(0.9,0.9);
+                            border: 1px solid $hover-border;      
+                        }
+                        &:active{
+                            background-color: $active-background;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contenedor{
+            width: 85%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2{
+            @extend %titulos;
+            color: $color-texto;
+            width: 80%;
+            text-shadow: $sombra-texto;
+            @media screen and (max-width: 750px){
+                width: 90%;
+
+            }
+            @media screen and (max-width: 505px){
+                font-size: 1.5rem;
+            }
+            
+        }
+        h3{
+            @extend %titulos-pequeños;
+            color: $color-texto;
+            text-shadow: $sombra-texto;
+        }
+
+
+        /*----articulo 3----*/ 
+
+        .ofertas-promociones{
+            @extend %flex-center;
+            margin-top: 0px;
+            row-gap: 50px;
+            background-color: map-get($main, section-fondo);
+            padding: 30px 0px;
+            border-top: 1px solid nth($colores, 2);
+            position: relative;
+            height: 600px;
+            h2{ 
+                position: absolute;
+
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                
+                object-fit: cover;
+                
+
+            }
+        }
+      
 }
 
-h2{
-    @extend %titulos;
-    color: $color-texto;
-    width: 80%;
-    text-shadow: $sombra-texto;
-    @media screen and (max-width: 750px){
-        width: 90%;
 
-    }
-    @media screen and (max-width: 505px){
-        font-size: 1.5rem;
-    }
-    
-}
-h3{
-    @extend %titulos-pequeños;
-    color: $color-texto;
-    text-shadow: $sombra-texto;
-}
 
-/*----articulo 3----*/ 
 
-.ofertas-promociones{
-    @extend %flex-center;
-    margin-top: 0px;
-    row-gap: 50px;
-    background-color: map-get($main, section-fondo);
-    padding: 30px 20px;
-    border-top: 1px solid nth($colores, 2);
-}
+

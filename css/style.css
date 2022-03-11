@@ -26,6 +26,17 @@ dl, ol, ul {
   margin-bottom: 0rem;
 }
 
+/*MEDIA QUERIES*/
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 505px) {
+  html {
+    font-size: 12px;
+  }
+}
 /*menu = nav*/
 header {
   position: sticky;
@@ -86,28 +97,28 @@ header .menu-logo .navegador ul li a:hover {
   transform: scale(1.1, 1.1);
 }
 
-.ofertas-promociones, .productos .perfumes-1, .productos .infante-1, .productos .hombre-1 {
+main .ofertas-promociones, main .productos .perfumes .perfumes-2, main .productos .perfumes .perfumes-1, main .productos .infantes .infante-2, main .productos .infantes .infante-1, main .productos .hombres .hombre-2, main .productos .hombres .hombre-1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-h2, h1 {
+main h2, main h1 {
   font-size: 2rem;
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
 }
 
-footer div h4, h3 {
+footer div h4, main h3 {
   font-size: 1.5rem;
   font-weight: bolder;
   text-transform: capitalize;
   text-align: center;
 }
 
-.presentacion-1 img {
+main .presentacion-1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -115,31 +126,36 @@ footer div h4, h3 {
 
 /*----main----*/
 /*----articulo 1----*/
-.presentacion-1 {
+main {
+  background-color: rgba(0, 0, 0, 0.726);
+  /*----articulo 2----*/
+  /*----articulo 3----*/
+}
+main .presentacion-1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 50px;
-  margin-top: 0px;
   position: relative;
   height: 500px;
   transition: all 0.5s ease;
+  border-bottom: 1px solid white;
 }
 @media screen and (max-width: 750px) {
-  .presentacion-1 {
+  main .presentacion-1 {
     height: 400px;
   }
 }
 @media screen and (max-width: 505px) {
-  .presentacion-1 {
+  main .presentacion-1 {
     height: 300px;
   }
 }
-.presentacion-1 h1 {
+main .presentacion-1 h1 {
   position: absolute;
 }
-h1 {
+main h1 {
   word-spacing: 3px;
   padding-top: 30px;
   color: white;
@@ -147,134 +163,141 @@ h1 {
   text-shadow: 0px 0px 20px #000000;
 }
 @media screen and (max-width: 750px) {
-  h1 {
+  main h1 {
     width: 90%;
   }
 }
 @media screen and (max-width: 505px) {
-  h1 {
+  main h1 {
     font-size: 1.5rem;
   }
 }
-
-/*----articulo 2----*/
-.productos {
-  display: grid;
-  background-color: rgba(0, 0, 0, 0.726);
-  border-top: 1px solid white;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 200px 1fr 1fr 1fr;
-  grid-template-areas: "sub-titulo sub-titulo" "hombre-1 hombre-2" "infante-2 infante-1" "perfumes-1 perfumes-2";
-  justify-items: center;
+main .productos {
+  background-color: rgba(0, 0, 0, 0.26);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 0px;
-  row-gap: 30px;
-  padding-bottom: 50px;
+  gap: 50px;
+  border-radius: 30px;
 }
-.productos div img {
+main .productos .hombres {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+main .productos .infantes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+main .productos .infantes .infante-1 {
+  order: 2;
+}
+main .productos .infantes .infante-2 {
+  order: 1;
+}
+main .productos .perfumes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+main .productos div div img {
   border-radius: 30px;
   border: 2px solid white;
 }
-.productos div .parrafos {
+main .productos div div .parrafos {
   text-align: center;
   padding: 30px 0px;
-  max-width: 50%;
   color: white;
   font-size: 1.2rem;
   text-shadow: 0px 0px 20px #000000;
 }
-.productos div .ver-mas {
-  font-size: 1.5rem;
+main .productos div div .ver-mas {
+  font-size: 1.2rem;
   text-decoration: none;
   border-radius: 30px;
   color: white;
   background-color: black;
-  padding: 0px 15px;
+  padding: 10px 20px;
   margin-top: 10px;
   transition: all 0.5s ease;
   text-shadow: 0px 0px 20px #000000;
 }
-.productos div .ver-mas:hover {
-  transform: scale(1.2, 1.2);
+main .productos div div .ver-mas:hover {
+  transform: scale(0.9, 0.9);
   border: 1px solid white;
 }
-.productos div .ver-mas:active {
+main .productos div div .ver-mas:active {
   background-color: #5f5f5f;
 }
-.productos .sub-titulo {
-  grid-area: sub-titulo;
+main .contenedor {
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.productos .hombre-1 {
-  grid-area: hombre-1;
-}
-.productos .hombre-2 {
-  grid-area: hombre-2;
-}
-.productos .infante-1 {
-  grid-area: infante-1;
-}
-.productos .infante-2 {
-  grid-area: infante-2;
-}
-.productos .perfumes-1 {
-  grid-area: perfumes-1;
-}
-.productos .perfumes-2 {
-  grid-area: perfumes-2;
-}
-
-h2 {
+main h2 {
   color: white;
   width: 80%;
   text-shadow: 0px 0px 20px #000000;
 }
 @media screen and (max-width: 750px) {
-  h2 {
+  main h2 {
     width: 90%;
   }
 }
 @media screen and (max-width: 505px) {
-  h2 {
+  main h2 {
     font-size: 1.5rem;
   }
 }
-
-h3 {
+main h3 {
   color: white;
   text-shadow: 0px 0px 20px #000000;
 }
-
-/*----articulo 3----*/
-.ofertas-promociones {
+main .ofertas-promociones {
   margin-top: 0px;
   row-gap: 50px;
-  background-color: rgba(0, 0, 0, 0.726);
-  padding: 30px 20px;
+  background-color: rgba(0, 0, 0, 0.26);
+  padding: 30px 0px;
   border-top: 1px solid white;
+  position: relative;
+  height: 600px;
+}
+main .ofertas-promociones h2 {
+  position: absolute;
+}
+main .ofertas-promociones img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.productos .hombre-1, .productos .infante-1, .productos .perfumes-1, .ofertas-promociones {
+main .productos .hombres .hombre-1, main .productos .hombres .hombre-2, main .productos .infantes .infante-1, main .productos .infantes .infante-2, main .productos .perfumes .perfumes-1, main .productos .perfumes .perfumes-2, main .ofertas-promociones {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-h1, h2 {
+main h1, main h2 {
   font-size: 2rem;
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
 }
 
-footer div h4, h3 {
+footer div h4, main h3 {
   font-size: 1.5rem;
   font-weight: bolder;
   text-transform: capitalize;
   text-align: center;
 }
 
-.presentacion-1 img {
+main .presentacion-1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -283,7 +306,6 @@ footer div h4, h3 {
 /*-----footer----*/
 footer {
   background-color: rgba(58, 58, 58, 0.726);
-  margin-top: 0px;
   border-top: 1px solid white;
 }
 footer div h4 {
@@ -304,63 +326,7 @@ footer .derechos {
 }
 
 /*--------RESPONSIVE--------*/
-@media screen and (max-width: 1200px) {
-  .productos {
-    grid-template-rows: 150px 1fr 1fr 1fr;
-  }
-}
-@media screen and (max-width: 920px) {
-  html {
-    font-size: 14px;
-  }
-
-  .productos {
-    margin: 0;
-    padding-top: 10px;
-    border-radius: 0px;
-    grid-template-rows: 100px 1fr 1fr 1fr;
-  }
-
-  .ofertas-promociones {
-    margin: 0;
-    border-radius: 0px;
-  }
-
-  .presentacion {
-    margin: 0;
-  }
-
-  .parrafos {
-    max-width: 100%;
-  }
-
-  .hombre-2, .infante-2, .perfumes-2 {
-    padding: 0px 20px;
-  }
-}
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
-
-  .productos {
-    border-radius: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 300px 1fr 300px 1fr 300px 1fr;
-    grid-template-areas: "sub-titulo" "hombre-1" "hombre-2" "infante-1" "infante-2" "perfumes-1" "perfumes-2";
-    gap: 0px;
-  }
-
-  .parrafos, h1 {
-    width: 100%;
-  }
-
-  .productos div img {
-    border-radius: 0px;
-    border: 0px;
-  }
-}
-/*nav */
+/*------------HEADER-------------------- */
 @media screen and (max-width: 750px) {
   .menu-logo {
     display: flex;
@@ -377,7 +343,11 @@ footer .derechos {
 }
 @media screen and (max-width: 505px) {
   header {
+    padding: 30px 0px;
     position: relative;
+  }
+  header .menu-logo a img {
+    max-width: 250px;
   }
 
   header .contenedor {
@@ -387,10 +357,6 @@ footer .derechos {
 
   .menu-logo {
     gap: 20px;
-  }
-
-  .menu-logo a img {
-    max-width: 250px;
   }
 
   .navegador ul {
@@ -408,5 +374,98 @@ footer .derechos {
     border-right: 0px solid white;
   }
 }
+/*------------FIN DE HEADER-------------------- */
+/*--------------------MAIN ----------------------*/
+@media screen and (max-width: 750px) {
+  /*----articulo 2----*/
+  main .productos {
+    background-color: rgba(0, 0, 0, 0.24);
+    gap: 50px;
+  }
+  main .productos .hombres {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  main .productos .infantes {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  main .productos .infantes .infante-1 {
+    order: 2;
+  }
+  main .productos .infantes .infante-2 {
+    order: 1;
+  }
+  main .productos .perfumes {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  main .productos div div img {
+    border-radius: 30px;
+    border: 2px solid white;
+  }
+  main .productos div div .ver-mas {
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+  main .contenedor {
+    width: 95%;
+    max-width: 850px;
+  }
+}
+/*FIN DE ARTICULO 2 */
+@media screen and (max-width: 505px) {
+  /*----articulo 2----*/
+  main .productos {
+    gap: 50px;
+    border-radius: 0px;
+  }
+  main .productos .hombres {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 40px 20px;
+    border-radius: 30px;
+  }
+  main .productos .infantes {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 40px 20px;
+    border-radius: 30px;
+  }
+  main .productos .infantes .infante-1 {
+    order: 0;
+  }
+  main .productos .infantes .infante-2 {
+    order: 1;
+  }
+  main .productos .perfumes {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 40px 20px;
+    border-radius: 30px;
+  }
+  main .productos div div img {
+    border-radius: 30px;
+    border: 2px solid white;
+  }
+  main .productos div div .ver-mas {
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  main .contenedor {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+}
+/*FIN DE ARTICULO 2 */
+/*---------------------FIN DE MAIN --------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

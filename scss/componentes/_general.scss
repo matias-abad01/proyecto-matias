@@ -31,3 +31,14 @@ dl, ol, ul {
 }
 
 
+/*MEDIA QUERIES*/
+@media screen and (max-width: 750px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 505px){
+    html{
+        font-size: 12px;
+    }
+}
