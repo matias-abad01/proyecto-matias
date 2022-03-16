@@ -18,8 +18,12 @@ img{
 }
 html{
     font-size: 16px;
+    background-image: url(../multimedia/textura-fondo.jpg);
+    background-position: center center;
+    background-attachment: fixed;
     body{
-        background-image: url(../multimedia/textura-fondo.jpg);
+        
+        background-color: rgba(0, 0, 0, 0.726);
         
         
     }

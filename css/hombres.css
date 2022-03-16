@@ -5,7 +5,7 @@
     justify-content: flex-start;
     align-items: center;
     
-    background-color: rgba(0, 0, 0, 0.726);
+    
     
     position: relative;
     height: 500px;
@@ -107,8 +107,6 @@
 
 @media screen and (max-width: 480px){
     .categorias-hombres{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 100px repeat(4, 150px);
         padding: 0px 10px;
         padding-bottom: 40px;
         gap: 10px;

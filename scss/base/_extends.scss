@@ -5,12 +5,21 @@
     align-items: center;
 
 }
+%titulos-grandes{
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
 %titulos{
     font-size: 2rem;
     font-weight: bolder;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: center;
 }
+
 
 %titulos-pequeños{
     font-size: 1.5rem;

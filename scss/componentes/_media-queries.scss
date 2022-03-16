@@ -16,11 +16,8 @@
     
     }
     .menu-logo a img{
-        max-width: 200px;
-       
-    
+        max-width: 200px;  
     }
-   
 }
     
 @media screen and (max-width: 505px){
@@ -67,26 +64,27 @@
 /*--------------------MAIN ----------------------*/
 
 @media screen and (max-width: 750px){
-    /*----articulo 2----*/
+   
     main{
+         /*----articulo 1----*/
+        .presentacion-1{
+           
+
+        }
+        h1{
+            width: 80%;
+        }
+         /*----articulo 2----*/
         .productos{
             background-color: rgba(0, 0, 0, 0.24);
             gap: 50px;
             .hombres{
                 grid-template-columns: 1fr 1fr;
-                gap: 20px;
-                
-                .hombre-1{
-                        
-                }
-                .hombre-2{
-                
-                }
         
             }
             .infantes{
                 grid-template-columns: 1fr 1fr;
-                gap: 20px;
+                
                 .infante-1{
                     order: 2;
                 }
@@ -96,23 +94,15 @@
             }
             .perfumes{
                 grid-template-columns: 1fr 1fr;
-                gap: 20px;
-                .perfumes-1{
-                
-                }
-                .perfumes-2{
-                    
-                }
+               
             }
                 
-            div{
+            .hombres, .infantes, .perfumes{
                 div{
                     img{
                         border-radius: 30px;
-                        border: map-get($main, border-img);
-                        
+                        border: map-get($main, border-img);    
                     }
-                   
                     .ver-mas{
                         font-size: 1.1rem;
                         text-decoration: none;
@@ -125,8 +115,7 @@
     
         .contenedor{
             width: 95%;
-            max-width: 850px;
-            
+            max-width: 850px;         
         }
     }
 
@@ -135,26 +124,28 @@
 
 
 @media screen and (max-width: 505px){
-    /*----articulo 2----*/
-    main{
-
     
+    main{
+         /*----articulo 1----*/
+         .presentacion-1{
+            
+
+        }
+        /*----articulo 2----*/
         .productos{
             gap: 50px;
             border-radius: 0px;
+            background-color: transparent;
             .hombres{
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr;
-                gap: 20px;
                 background-color: rgba(0, 0, 0, 0.26);
                 padding: 40px 20px;
                 border-radius: 30px;
-        
             }
             .infantes{
                 grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr;
-                gap: 20px;
+                grid-template-rows: auto 1fr;     
                 background-color: rgba(0, 0, 0, 0.26);
                 padding: 40px 20px;
                 border-radius: 30px;
@@ -168,19 +159,19 @@
             .perfumes{
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr;
-                gap: 20px;
                 background-color: rgba(0, 0, 0, 0.26);
                 padding: 40px 20px;
                 border-radius: 30px;
             }
                 
-            div{
+            .hombres, .infantes, .perfumes{
+                gap: 50px;
+               
                 div{
                     img{
                         border-radius: 30px;
                         border: map-get($main, border-img);  
-                    }
-                    
+                    }    
                     .ver-mas{
                         font-size: 1rem;
                         text-decoration: none;
@@ -192,9 +183,8 @@
         }
         .contenedor{
             width: 100%;
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            
+            padding: 0px 20px;
         }
     } 
 }
