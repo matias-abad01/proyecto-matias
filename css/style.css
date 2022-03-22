@@ -21,7 +21,7 @@ html {
   background-attachment: fixed;
 }
 html body {
-  background-color: rgba(0, 0, 0, 0.726);
+  background-color: rgba(0, 0, 0, 0.664);
 }
 
 dl, ol, ul {
@@ -83,10 +83,6 @@ header .menu-logo .navegador ul li {
   display: inline-block;
   transition: all 0.5s ease;
 }
-header .menu-logo .navegador ul li:hover {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-}
 header .menu-logo .navegador ul li:active {
   background-color: #5f5f5f;
 }
@@ -103,6 +99,7 @@ header .menu-logo .navegador ul li a {
 }
 header .menu-logo .navegador ul li a:hover {
   transform: scale(1.1, 1.1);
+  text-shadow: 0px 0px 30px white;
 }
 
 main .ofertas-promociones, main .productos .perfumes .perfumes-2, main .productos .perfumes .perfumes-1, main .productos .infantes .infante-2, main .productos .infantes .infante-1, main .productos .hombres .hombre-2, main .productos .hombres .hombre-1 {
@@ -158,7 +155,7 @@ main h1 {
   padding: 0px 20px;
   width: 60%;
   color: white;
-  text-shadow: 0px 0px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
   animation-name: cambiar-color;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -169,13 +166,14 @@ main h1 {
   }
 }
 main .productos {
-  background-color: rgba(0, 0, 0, 0.26);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
   border-radius: 30px;
+  box-shadow: 0px 0px 10px white;
 }
 main .productos .hombres {
   display: grid;
@@ -200,14 +198,14 @@ main .productos .hombres, main .productos .infantes, main .productos .perfumes {
 }
 main .productos .hombres div img, main .productos .infantes div img, main .productos .perfumes div img {
   border-radius: 30px;
-  border: 2px solid white;
+  box-shadow: 0px 0px 10px white;
 }
 main .productos .hombres div .parrafos, main .productos .infantes div .parrafos, main .productos .perfumes div .parrafos {
   text-align: center;
   padding: 30px 0px;
   color: white;
   font-size: 1.2rem;
-  text-shadow: 0px 0px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
 }
 main .productos .hombres div .ver-mas, main .productos .infantes div .ver-mas, main .productos .perfumes div .ver-mas {
   font-size: 1.2rem;
@@ -218,11 +216,11 @@ main .productos .hombres div .ver-mas, main .productos .infantes div .ver-mas, m
   padding: 10px 20px;
   margin-top: 10px;
   transition: all 0.5s ease;
-  text-shadow: 0px 0px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
 }
 main .productos .hombres div .ver-mas:hover, main .productos .infantes div .ver-mas:hover, main .productos .perfumes div .ver-mas:hover {
   transform: scale(0.9, 0.9);
-  border: 1px solid white;
+  box-shadow: 0px 0px 30px white;
 }
 main .productos .hombres div .ver-mas:active, main .productos .infantes div .ver-mas:active, main .productos .perfumes div .ver-mas:active {
   background-color: #5f5f5f;
@@ -236,7 +234,7 @@ main .contenedor {
 }
 main h2 {
   color: white;
-  text-shadow: 0px 0px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
   padding: 0px 20px;
   animation-name: cambiar-color;
   animation-duration: 5s;
@@ -244,7 +242,7 @@ main h2 {
 }
 main h3 {
   color: white;
-  text-shadow: 0px 0px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
 }
 main .ofertas-promociones {
   margin-bottom: 50px;
@@ -292,7 +290,7 @@ footer div h4 {
   word-spacing: 3px;
   padding: 20px 0px;
   color: white;
-  text-shadow: 0px 0px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
 }
 footer .redes-sociales {
   border-top: 1px solid white;
@@ -348,11 +346,6 @@ footer .derechos {
     width: 100%;
     gap: 10px;
   }
-
-  .navegador ul li:hover {
-    border-left: 0px solid white;
-    border-right: 0px solid white;
-  }
 }
 /*------------FIN DE HEADER-------------------- */
 /*--------------------MAIN ----------------------*/
@@ -365,7 +358,6 @@ footer .derechos {
     width: 80%;
   }
   main .productos {
-    background-color: rgba(0, 0, 0, 0.24);
     gap: 50px;
   }
   main .productos .hombres {
@@ -385,14 +377,13 @@ footer .derechos {
   }
   main .productos .hombres div img, main .productos .infantes div img, main .productos .perfumes div img {
     border-radius: 30px;
-    border: 2px solid white;
   }
   main .productos .hombres div .ver-mas, main .productos .infantes div .ver-mas, main .productos .perfumes div .ver-mas {
     font-size: 1.1rem;
     text-decoration: none;
   }
   main .contenedor {
-    width: 95%;
+    width: 90%;
     max-width: 850px;
   }
 }
@@ -406,20 +397,29 @@ footer .derechos {
     gap: 50px;
     border-radius: 0px;
     background-color: transparent;
+    box-shadow: none;
+  }
+  main .productos h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px white;
   }
   main .productos .hombres {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 40px 20px;
     border-radius: 30px;
+    box-shadow: 0px 0px 10px white;
   }
   main .productos .infantes {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 40px 20px;
     border-radius: 30px;
+    box-shadow: 0px 0px 10px white;
   }
   main .productos .infantes .infante-1 {
     order: 0;
@@ -430,16 +430,16 @@ footer .derechos {
   main .productos .perfumes {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 40px 20px;
     border-radius: 30px;
+    box-shadow: 0px 0px 10px white;
   }
   main .productos .hombres, main .productos .infantes, main .productos .perfumes {
     gap: 50px;
   }
   main .productos .hombres div img, main .productos .infantes div img, main .productos .perfumes div img {
     border-radius: 30px;
-    border: 2px solid white;
   }
   main .productos .hombres div .ver-mas, main .productos .infantes div .ver-mas, main .productos .perfumes div .ver-mas {
     font-size: 1rem;
@@ -452,5 +452,96 @@ footer .derechos {
 }
 /*FIN DE ARTICULO 2 */
 /*---------------------FIN DE MAIN --------------------------------*/
+/*-----section 1-----*/
+.hombres-ofertas {
+  background-image: url(/multimedia/hombre-ofertas.jpg);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 50px;
+  border-bottom: 1px solid white;
+}
+
+/*-----section 2-----*/
+.hombres-categorias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  gap: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 60px 30px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px white;
+}
+.hombres-categorias .categorias {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 200px);
+  width: 100%;
+  gap: 30px;
+}
+.hombres-categorias .categorias .hombres-items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  box-shadow: 0px 0px 10px white;
+}
+.hombres-categorias .categorias .hombres-items:hover {
+  box-shadow: 0px 0px 30px white;
+  transform: scale(0.9, 0.9);
+}
+.hombres-categorias .categorias .hombres-items p {
+  z-index: 1;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 10px #000000;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.hombres-categorias .categorias .hombres-items img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 750px) {
+  /*-----section 2-----*/
+  .hombres-categorias .categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 150px);
+    width: 100%;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 505px) {
+  .hombres-categorias {
+    padding: 30px 30px;
+  }
+  .hombres-categorias .categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 150px);
+    width: 100%;
+    gap: 20px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
