@@ -19,8 +19,9 @@ main{
             background-size: cover;
             height: 600px;
             transition: all 0.5s ease;
-            border-bottom: map-get($main, border-bottomm);
+            
             margin-bottom: 50px;
+            box-shadow: map-get($main, sombras);
             h1{
                
                 
@@ -34,7 +35,7 @@ main{
             width: 60%;   
             color: $color-texto;  
             text-shadow: $sombra-texto;
-            animation-name: cambiar-color;
+            /*animation-name: cambiar-color;
             animation-duration: 3s;
             animation-iteration-count: infinite;
             
@@ -45,7 +46,7 @@ main{
                 }
                
                 
-            }      
+            }*/      
 
         }
 
@@ -59,7 +60,10 @@ main{
             align-items: center;
             gap: 50px;
             border-radius: 30px;
-            box-shadow: 0px 0px 10px white;
+            box-shadow: map-get($main, sombras);
+            h2{
+                text-shadow: $iluminacion-texto;
+            }
            
         
             .hombres{
@@ -107,9 +111,13 @@ main{
             .hombres, .infantes, .perfumes{
                 gap: 20px;
                 div{
+                    h3{
+                        text-shadow: $iluminacion-texto;
+
+                    }
                     img{
                         border-radius: 30px;
-                        box-shadow: 0px 0px 10px white;
+                        box-shadow: map-get($main, sombras);
                         
 
                     }
@@ -157,9 +165,7 @@ main{
             color: $color-texto;
             text-shadow: $sombra-texto;
             padding: 0px 20px;
-            animation-name: cambiar-color;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
+           
             
         }
         h3{
@@ -174,9 +180,6 @@ main{
         .ofertas-promociones{
             @extend %flex-center;
             margin-bottom: 50px;
-            
-           
-            
             border-top: 1px solid nth($colores, 2);
             background-image: url(../multimedia/ofertas-promos.jpg);
             background-position: center center;
@@ -185,8 +188,6 @@ main{
             height: 600px;
             .sub-titulo{
                 @extend %titulos-grandes;
-
-                
 
             }
             
