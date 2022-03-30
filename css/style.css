@@ -17,12 +17,25 @@ img {
 
 html {
   font-size: 16px;
-  background-image: url(../multimedia/textura-fondo.jpg);
   background-position: center center;
   background-attachment: fixed;
 }
 html body {
-  background-color: rgba(0, 0, 0, 0.664);
+  background: linear-gradient(45deg, black, grey, black, grey, black, grey, black, grey, black, grey);
+  background-attachment: fixed;
+  background-size: 600%;
+  animation: fondo-animado 40s infinite;
+}
+@keyframes fondo-animado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 dl, ol, ul {
@@ -135,8 +148,15 @@ main h2 {
   text-align: center;
 }
 
-footer div h4, main h3 {
+main h3 {
   font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+footer .footers div h4 {
+  font-size: 1rem;
   font-weight: bolder;
   text-transform: capitalize;
   text-align: center;
@@ -166,20 +186,16 @@ main .presentacion-1 {
 main h1 {
   word-spacing: 3px;
   padding: 0px 20px;
-  width: 60%;
   color: white;
   text-shadow: 0px 0px 10px #000000;
   /*animation-name: cambiar-color;
   animation-duration: 3s;
-  animation-iteration-count: infinite;
-
+  animation-iteration-count: infinite;   
   @keyframes cambiar-color {
       50%{
           color: rgba(255, 255, 255, 0.747);
 
-      }
-
-
+      }         
   }*/
 }
 main .productos {
@@ -266,7 +282,7 @@ main h3 {
 }
 main .ofertas-promociones {
   margin-bottom: 50px;
-  border-top: 1px solid white;
+  box-shadow: 0px 0px 10px white;
   background-image: url(../multimedia/ofertas-promos.jpg);
   background-position: center center;
   background-attachment: fixed;
@@ -299,8 +315,15 @@ main h2 {
   text-align: center;
 }
 
-footer div h4, main h3 {
+main h3 {
   font-size: 1.5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+footer .footers div h4 {
+  font-size: 1rem;
   font-weight: bolder;
   text-transform: capitalize;
   text-align: center;
@@ -309,24 +332,133 @@ footer div h4, main h3 {
 /*COLOR DE FONDO - SOMBRAS*/
 /*-----footer----*/
 footer {
-  background-color: rgba(58, 58, 58, 0.726);
-  border-top: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  box-shadow: 0px 0px 10px white;
 }
-footer div h4 {
+footer .footers {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90%;
+  margin: auto;
+  gap: 30px;
+}
+footer .footers .footer-1 {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footers .footer-1 h4 {
+  margin-bottom: 20px;
+}
+footer .footers .footer-1 form {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer .footers .footer-1 form .form-1 {
+  display: grid;
+  gap: 20px;
+}
+footer .footers .footer-1 form .form-1 .datos {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  min-width: 170px;
+  border: none;
+  box-shadow: 0px 0px 10px white;
+}
+footer .footers .footer-1 form .form-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer .footers .footer-1 form .form-2 textarea {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px white;
+}
+footer .footers .footer-1 form .form-2 .enviar {
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: none;
+  height: auto;
+  box-shadow: 0px 0px 10px white;
+  transition: all 0.5s ease;
+}
+footer .footers .footer-1 form .form-2 .enviar:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 0px 0px 20px white;
+}
+footer .footers .footer-1 form .form-2 .enviar:active {
+  background-color: #5f5f5f;
+}
+footer .footers div h4 {
   word-spacing: 3px;
-  padding: 20px 0px;
   color: white;
-  text-shadow: 0px 0px 10px #000000;
+  text-shadow: 0px 0px 10px white;
 }
-footer .redes-sociales {
-  border-top: 1px solid white;
+footer .footers .footer-2 {
+  background-color: rgba(255, 255, 255, 0);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
 }
-footer .redes-sociales div img {
-  width: 40px;
-  margin: 0px 5px;
+footer .footers .footer-2 .medios-de-pago {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-footer .derechos {
-  background-color: black;
+footer .footers .footer-2 .medios-de-pago div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+footer .footers .footer-2 .medios-de-pago div img {
+  max-width: 40px;
+  filter: drop-shadow(0px 0px 5px white);
+}
+footer .footers .footer-2 .redes-sociales {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+footer .footers .footer-2 .redes-sociales div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .footers .footer-2 .redes-sociales div img {
+  border-radius: 50%;
+  max-width: 40px;
+  filter: drop-shadow(0px 0px 5px white);
+  transition: all 0.5s ease;
+}
+footer .footers .footer-2 .redes-sociales div img:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 0px 0px 20px white;
+}
+footer .footers .footer-2 .redes-sociales div img:active {
+  background-color: #5f5f5f;
+}
+footer .derechos-reservados {
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 /*--------RESPONSIVE--------*/
@@ -373,15 +505,11 @@ footer .derechos {
     gap: 10px;
   }
 }
-/*------------FIN DE HEADER-------------------- */
+/*-------------------------------- */
 /*--------------------MAIN ----------------------*/
 @media screen and (max-width: 750px) {
   main {
-    /*----articulo 1----*/
     /*----articulo 2----*/
-  }
-  main h1 {
-    width: 80%;
   }
   main .productos {
     gap: 50px;
@@ -416,7 +544,6 @@ footer .derechos {
 /*FIN DE ARTICULO 2 */
 @media screen and (max-width: 505px) {
   main {
-    /*----articulo 1----*/
     /*----articulo 2----*/
   }
   main .productos {
@@ -476,11 +603,47 @@ footer .derechos {
     padding: 0px 20px;
   }
 }
-/*FIN DE ARTICULO 2 */
-/*---------------------FIN DE MAIN --------------------------------*/
+/*--------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+  footer .footers {
+    grid-template-columns: 1fr;
+  }
+  footer .footers .footer-2 .medios-de-pago div img {
+    max-width: 40px;
+    min-width: 20px;
+    width: 100%;
+  }
+  footer .footers .footer-2 .redes-sociales div img {
+    max-width: 40px;
+    min-width: 20px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 505px) {
+  footer .footers .footer-1 form {
+    grid-template-columns: 1fr;
+  }
+  footer .footers .footer-1 form .form-2 {
+    flex-direction: column;
+  }
+  footer .footers .footer-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footers .footer-2 .medios-de-pago div img {
+    max-width: 30px;
+  }
+  footer .footers .footer-2 .redes-sociales div img {
+    max-width: 30px;
+  }
+}
 /*-----section 1-----*/
 .hombres-ofertas {
-  background-image: url(../multimedia/hombre-ofertas.jpg);
+  background: linear-gradient(155deg, black, white, black);
+  background-attachment: fixed;
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -499,6 +662,7 @@ footer .derechos {
 .hombres-ofertas img {
   width: auto;
   height: 100%;
+  padding: 20px 0px;
 }
 
 /*-----section 2-----*/
@@ -507,7 +671,7 @@ footer .derechos {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
   margin-bottom: 50px;
   gap: 50px;
@@ -520,10 +684,11 @@ footer .derechos {
   text-shadow: 0px 0px 10px white;
 }
 .hombres-categorias .categorias {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 200px);
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 .hombres-categorias .categorias .hombres-items {
@@ -532,6 +697,8 @@ footer .derechos {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 230px;
+  height: 170px;
   border-radius: 20px;
   transition: all 0.5s ease;
   box-shadow: 0px 0px 10px white;
@@ -560,55 +727,60 @@ footer .derechos {
 /* RESPONSIVE */
 @media screen and (max-width: 750px) {
   /*-----section 2-----*/
-  .hombres-categorias .categorias {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 150px);
-    gap: 20px;
+  .hombres-categorias .categorias .hombres-items {
+    width: 150px;
+    height: 130px;
   }
 }
 @media screen and (max-width: 505px) {
   .hombres-categorias {
     padding: 30px 20px;
     gap: 30px;
+    width: 90%;
   }
   .hombres-categorias .categorias {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 150px);
-    gap: 20px;
+    width: 100%;
+    gap: 15px;
+  }
+  .hombres-categorias .categorias .hombres-items {
+    height: 100%;
+    width: 100%;
   }
 }
 /*INFANTILES*/
 /*---section 1:infante presentacion---*/
-.infante-presentacion {
+.infante-presentacion, .perfumes-presentacion {
   margin-bottom: 50px;
 }
-.infante-presentacion .carousel {
+.infante-presentacion .carousel, .perfumes-presentacion .carousel {
   box-shadow: 0px 0px 10px white;
 }
-.infante-presentacion .carousel .carousel-inner .carousel-item {
+.infante-presentacion .carousel .carousel-inner .carousel-item, .perfumes-presentacion .carousel .carousel-inner .carousel-item {
   max-height: 600px;
   height: auto;
 }
-.infante-presentacion .carousel .carousel-inner .carousel-item img {
+.infante-presentacion .carousel .carousel-inner .carousel-item img, .perfumes-presentacion .carousel .carousel-inner .carousel-item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.infante-presentacion .carousel .carousel-inner .carousel-item div h5 {
+.infante-presentacion .carousel .carousel-inner .carousel-item div h5, .perfumes-presentacion .carousel .carousel-inner .carousel-item div h5 {
   text-transform: capitalize;
   text-shadow: 0px 0px 10px black;
+  font-weight: bolder;
 }
-.infante-presentacion .carousel .carousel-indicators button {
+.infante-presentacion .carousel .carousel-indicators button, .perfumes-presentacion .carousel .carousel-indicators button {
   filter: drop-shadow(2px 4px 2px black);
 }
-.infante-presentacion .carousel .carousel-control-prev-icon {
+.infante-presentacion .carousel .carousel-control-prev-icon, .perfumes-presentacion .carousel .carousel-control-prev-icon {
   height: 80px;
   width: 100%;
   filter: drop-shadow(0px 5px 2px black);
 }
-.infante-presentacion .carousel .carousel-control-next-icon {
+.infante-presentacion .carousel .carousel-control-next-icon, .perfumes-presentacion .carousel .carousel-control-next-icon {
   height: 80px;
   width: 100%;
   filter: drop-shadow(0px 5px 2px black);
@@ -621,13 +793,21 @@ footer .derechos {
   margin: auto;
   max-width: 1000px;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px white;
+}
+.infantes-categorias h2 {
+  text-shadow: 0px 0px 10px white;
+  padding: 4%;
 }
 .infantes-categorias .infantes-items {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
 }
 .infantes-categorias .infantes-items div {
   display: grid;
@@ -636,7 +816,6 @@ footer .derechos {
 }
 .infantes-categorias .infantes-items div img {
   width: 100%;
-  height: 100%;
   border-radius: 20px;
   box-shadow: 0px 0px 10px white;
 }
@@ -675,35 +854,30 @@ footer .derechos {
   background-color: #5f5f5f;
 }
 .infantes-categorias .infantes-items .infantes-niños {
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 10px white;
-  padding: 40px;
+  padding: 4%;
   gap: 40px;
 }
 .infantes-categorias .infantes-items .infantes-bebes {
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 10px white;
-  padding: 40px;
+  padding: 4%;
   gap: 40px;
 }
 .infantes-categorias .infantes-items .infantes-bebes .bebes-1 {
   order: 2;
 }
 .infantes-categorias .infantes-items .infantes-accesorios {
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 10px white;
-  padding: 40px;
+  padding: 4%;
   gap: 40px;
 }
 
-/*------------RESPONSIVE---------------*/
+/*-------------------------------------*/
+/*-------------------------------------RESPONSIVE----------------------------------------------------*/
 @media screen and (max-width: 750px) {
   /*---section 1:infante presentacion---*/
-  .carousel .carousel-inner .carousel-item {
+  .infante-presentacion .carousel .carousel-inner .carousel-item, .perfumes-presentacion .carousel .carousel-inner .carousel-item {
     max-height: 600px;
     height: auto;
   }
-  .carousel .carousel-inner .carousel-item img {
+  .infante-presentacion .carousel .carousel-inner .carousel-item img, .perfumes-presentacion .carousel .carousel-inner .carousel-item img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -713,9 +887,6 @@ footer .derechos {
   .infantes-categorias {
     width: 85%;
     margin-bottom: 50px;
-  }
-  .infantes-categorias .infantes-items {
-    gap: 30px;
   }
   .infantes-categorias .infantes-items div div {
     gap: 10px;
@@ -731,29 +902,45 @@ footer .derechos {
     padding: 10px 20px;
   }
   .infantes-categorias .infantes-items .infantes-niños {
-    padding: 20px;
     gap: 20px;
   }
   .infantes-categorias .infantes-items .infantes-bebes {
-    padding: 20px;
     gap: 20px;
   }
   .infantes-categorias .infantes-items .infantes-bebes .bebes-1 {
     order: 2;
   }
   .infantes-categorias .infantes-items .infantes-accesorios {
-    padding: 20px;
     gap: 20px;
   }
 }
 /*----------------------------------*/
 @media screen and (max-width: 505px) {
+  /*---section 1:infante presentacion---*/
+  .infante-presentacion .carousel .carousel-control-prev-icon, .perfumes-presentacion .carousel .carousel-control-prev-icon {
+    height: 40px;
+    width: 100%;
+  }
+  .infante-presentacion .carousel .carousel-control-next-icon, .perfumes-presentacion .carousel .carousel-control-next-icon {
+    height: 40px;
+    width: 100%;
+  }
+
+  /*---section 2:infante categorias---*/
   .infantes-categorias {
-    width: 95%;
+    gap: 30px;
+    width: 90%;
     margin-bottom: 50px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .infantes-categorias h2 {
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px white;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .infantes-categorias .infantes-items {
-    gap: 50px;
+    gap: 30px;
   }
   .infantes-categorias .infantes-items div {
     display: grid;
@@ -763,25 +950,85 @@ footer .derechos {
     gap: 10px;
   }
   .infantes-categorias .infantes-items .infantes-niños {
-    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px white;
+    padding: 7%;
     gap: 20px;
   }
   .infantes-categorias .infantes-items .infantes-niños .niño-1 {
     order: 2;
   }
   .infantes-categorias .infantes-items .infantes-bebes {
-    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px white;
+    padding: 7%;
     gap: 20px;
   }
   .infantes-categorias .infantes-items .infantes-bebes .bebes-1 {
     order: 2;
   }
   .infantes-categorias .infantes-items .infantes-accesorios {
-    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px white;
+    padding: 7%;
     gap: 20px;
   }
   .infantes-categorias .infantes-items .infantes-accesorios .accesorios-1 {
     order: 2;
+  }
+}
+/*------PERFUMES-------- */
+.perfumes-categorias {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.perfumes-categorias .perfumes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px white;
+  border-radius: 30px;
+}
+.perfumes-categorias .perfumes-container div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px white;
+  transition: all 0.5s ease;
+}
+.perfumes-categorias .perfumes-container div:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 0px 0px 20px white;
+}
+.perfumes-categorias .perfumes-container div img {
+  border-radius: 20px;
+}
+.perfumes-categorias .perfumes-container div h3 {
+  position: absolute;
+  font-weight: bolder;
+  padding: 20px;
+}
+
+/*------RESPONSIVE------ */
+@media screen and (max-width: 505px) {
+  .perfumes-categorias {
+    width: 90%;
+  }
+  .perfumes-categorias .perfumes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 9%;
+  }
+  .perfumes-categorias .perfumes-container div h3 {
+    font-size: 2rem;
   }
 }
 

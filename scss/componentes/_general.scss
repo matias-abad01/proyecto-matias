@@ -6,26 +6,33 @@
     font-family: 'Cabin', sans-serif;
     &::selection{
         background-color: rgba(165, 164, 164, 0.76);
-    }
-    
+    } 
 }
-
 
 img{
     border-style: none;
     max-width: 100%;
-
 }
 html{
     font-size: 16px;
-    background-image: url(../multimedia/textura-fondo.jpg);
     background-position: center center;
     background-attachment: fixed;
     body{
-        
-        background-color: rgba(0, 0, 0, 0.664);
-        
-        
+        background: linear-gradient(45deg,black,grey,black,grey,black,grey,black,grey,black,grey);
+        background-attachment: fixed;
+        background-size: 600%;
+        animation: fondo-animado 40s infinite;
+        @keyframes fondo-animado{
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }     
+        }  
     }
 }
 

@@ -6,29 +6,139 @@
 /*-----footer----*/
 footer{
     background-color: map-get($footer,  footer-fondo);
-    
-    border-top: map-get($footer, border-top);
-    div{
-        h4{
-            @extend %titulos-pequeños;
-            word-spacing: 3px;
-            padding: 20px 0px;
-            color: $color-texto;
-            text-shadow: $sombra-texto;
-
-        }
-    }
-    .redes-sociales{
-        border-top: 1px solid nth($colores, 2);
-        div{
-            img{
-                width: 40px;
-                margin: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    box-shadow: map-get($footer,  sombras-2);
+    .footers{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: auto;
+        gap: 30px;
+        
+        .footer-1{
+            background-color: map-get($footer,  section-fondo);
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: map-get($footer,  sombras);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h4{
+                margin-bottom: 20px;
+            }
+            form{
+                gap: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .form-1{ 
+                    display: grid;
+                    gap:20px;
+                    .datos{
+                        width: 100%;
+                        height: 30px;
+                        border-radius: 10px;
+                        min-width: 170px;
+                        border: none;
+                        box-shadow: map-get($footer,  sombras);
+                    }                   
+                }
+                .form-2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap:20px;
+                    textarea{  
+                        border-radius: 10px;
+                        border: none;
+                        box-shadow: map-get($footer,  sombras);
+                    }
+                    .enviar{
+                        border-radius: 20px;
+                        padding: 5px 10px;
+                        border: none;
+                        height: auto;
+                        box-shadow: map-get($footer,  sombras);
+                        transition: all 0.5s ease;
+                        &:hover{
+                            transform: scale(0.9,0.9);
+                            box-shadow: $hover-shadow;      
+                        }
+                        &:active{
+                            background-color: $active-background;
+                        }       
+                    }
+                }   
             }
         }
-    }
-    .derechos{
-        background-color: nth($colores, 1);
-    }
+        div{
+            h4{
+                @extend %titulos-muy-pequeños;
+                word-spacing: 3px;
+                color: $color-texto;
+                text-shadow: $iluminacion-texto;
+            }
+        }
+        .footer-2{
+            background-color: map-get($footer,  section-fondo);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 20px;
 
+            .medios-de-pago{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    img{
+                        max-width: 40px;
+                        filter: drop-shadow(0px 0px 5px white);
+                    }
+                }
+            }
+            .redes-sociales{
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        border-radius: 50%;
+                        max-width: 40px;
+                        filter: drop-shadow(0px 0px 5px white);
+                        transition: all 0.5s ease;
+                        &:hover{
+                            transform: scale(0.9,0.9);
+                            box-shadow: $hover-shadow;      
+                        }
+                        &:active{
+                            background-color: $active-background;
+                        }    
+                    }
+                }
+            }
+        }
+    }        
+    .derechos-reservados{
+        color: $color-texto;
+        text-align: center;
+        padding: 10px 20px;
+    }
 }
+
+

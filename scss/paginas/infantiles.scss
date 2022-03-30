@@ -1,7 +1,7 @@
 /*INFANTILES*/
 
 /*---section 1:infante presentacion---*/
-.infante-presentacion{
+.infante-presentacion, .perfumes-presentacion{
     margin-bottom: 50px;
     .carousel{
         box-shadow: 0px 0px 10px white;
@@ -14,25 +14,20 @@
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
-                        
-            
                 }
                 div{
                     h5{
                         text-transform: capitalize;
                         text-shadow: 0px 0px 10px black;
-
+                        font-weight: bolder;
                     }
                 }
-
             }
         }
         .carousel-indicators{
-        
             button {
                 filter: drop-shadow(2px 4px 2px black);
             }
-
         }
         .carousel-control-prev-icon{
             height: 80px;
@@ -54,33 +49,32 @@
     margin: auto;
     max-width: 1000px;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: map-get($main, section-fondo);
+    border-radius: 30px;
+    box-shadow: map-get($main, sombras);
+
+    h2{
+        text-shadow: $iluminacion-texto;
+        padding: 4%;
+    }
     
     .infantes-items{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
-        
         div{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            
-            
-            border-radius: 30px;
-            
-            
-            
+            border-radius: 30px; 
             img{
-                width: 100%;
-                height: 100%;
+                width: 100%;    
                 border-radius: 20px;
                 box-shadow: map-get($main, sombras);
-               
-
             }
-            div{
-                
+            div{   
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -90,8 +84,7 @@
                     text-shadow: $iluminacion-texto
                 }
                 p{
-                    text-align: center;
-                    
+                    text-align: center; 
                     color: $color-texto;
                     font-size: nth($font-size, 1);
                     text-shadow: $sombra-texto;  
@@ -103,8 +96,7 @@
                     border-radius: 30px;
                     color: $color-texto;
                     background-color: nth($colores, 1);
-                    padding: 10px 20px;
-                    
+                    padding: 10px 20px; 
                     transition: all 0.5s ease;
                     text-shadow: $sombra-texto;
                     &:hover{
@@ -115,70 +107,51 @@
                         background-color: $active-background;
                     }
                 }
-
-                
-
             }
         }
-        .infantes-niños{
-            background-color: map-get($main, section-fondo);
-            box-shadow: map-get($main, sombras);
-            padding: 40px;
+        .infantes-niños{ 
+            padding: 4%;
             gap: 40px;
-
         }
-        .infantes-bebes{
-            background-color: map-get($main, section-fondo);
-            box-shadow: map-get($main, sombras);
-            padding: 40px;
+        .infantes-bebes{  
+            padding: 4%;
             gap: 40px;
             .bebes-1{
                 order: 2;
-            }
-            
+            }   
         }
         .infantes-accesorios{
-            background-color: map-get($main, section-fondo);
-            box-shadow: map-get($main, sombras);
-            padding: 40px;
-            gap: 40px;
-            
-            
+            padding: 4%;
+            gap: 40px;    
         }
-
     }
 }
+/*-------------------------------------*/
 
-
-/*------------RESPONSIVE---------------*/
+/*-------------------------------------RESPONSIVE----------------------------------------------------*/
 
 @media screen and (max-width: 750px){
     /*---section 1:infante presentacion---*/
+    .infante-presentacion, .perfumes-presentacion{
         .carousel{
-
             .carousel-inner{
                 .carousel-item{
                     max-height: 600px;
-                    height: auto;
-                        
+                    height: auto;        
                     img{
                         height: 100%;
                         width: 100%;
-                        object-fit: contain;
-                            
-                
-                    }
-                
+                        object-fit: contain;               
+                    }             
                 }
-            }
+            }        
         }
+    }    
     /*---section 2:infante categorias---*/
     .infantes-categorias{
         width: 85%;
-        margin-bottom: 50px;
-        
-        .infantes-items{
-            gap: 30px;
+        margin-bottom: 50px;   
+        .infantes-items{      
             div{
                 
                 div{
@@ -195,74 +168,85 @@
                     }
                 }
             }
-            .infantes-niños{
-                
-                padding: 20px;
+            .infantes-niños{    
                 gap: 20px;
-
             }
-            .infantes-bebes{      
-                padding: 20px;
+            .infantes-bebes{          
                 gap: 20px;
                 .bebes-1{
                     order: 2;
-                }
-                
+                }        
             }
-            .infantes-accesorios{
-                padding: 20px;
-                gap: 20px;
-                
+            .infantes-accesorios{          
+                gap: 20px;              
             }
-
         }
     }
 }
 /*----------------------------------*/
 @media screen and (max-width: 505px){
-
+    /*---section 1:infante presentacion---*/
+    .infante-presentacion, .perfumes-presentacion{
+        .carousel{
+            .carousel-control-prev-icon{
+                height: 40px;
+                width: 100%;     
+            }
+            .carousel-control-next-icon{
+                height: 40px;
+                width: 100%;        
+            }
+        }
+    }
+/*---section 2:infante categorias---*/
     .infantes-categorias{
-        width: 95%;
+        gap: 30px;
+        width: 90%;
         margin-bottom: 50px;
-        
+        background-color: transparent;
+        box-shadow: none;
+        h2{
+            border-radius: 30px;
+            box-shadow: map-get($main, sombras);
+            background-color: map-get($main, section-fondo);
+        } 
         .infantes-items{
-            gap: 50px;
+            gap: 30px;
             div{
                 display: grid;
-                grid-template-columns: 1fr;
-                
+                grid-template-columns: 1fr;     
                 div{
                     gap: 10px;
                 }
             }
             .infantes-niños{
-                
-                padding: 30px 20px;
+                background-color: map-get($main, section-fondo);
+                box-shadow: map-get($main, sombras);
+                padding: 7%;
                 gap: 20px;
                 .niño-1{
                     order: 2;
                 }
-
             }
-            .infantes-bebes{      
-                padding: 30px 20px;
+            .infantes-bebes{
+                background-color: map-get($main, section-fondo);
+                box-shadow: map-get($main, sombras);      
+                padding: 7%;
                 gap: 20px;
                 .bebes-1{
                     order: 2;
                     
-                }
-                
+                }    
             }
             .infantes-accesorios{
-                padding: 30px 20px;
+                background-color: map-get($main, section-fondo);
+                box-shadow: map-get($main, sombras);
+                padding: 7%;
                 gap: 20px;
                 .accesorios-1{
                     order: 2;
-                }
-                
+                }              
             }
-
         }
     }
-
 }

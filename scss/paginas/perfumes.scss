@@ -1,0 +1,57 @@
+/*------PERFUMES-------- */
+.perfumes-categorias{
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    .perfumes-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5%;
+        padding: 5%;
+        background-color: map-get($main, section-fondo);
+        box-shadow: map-get($main, sombras);
+        border-radius: 30px;
+        div{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: map-get($main, sombras);
+            transition: all 0.5s ease;
+            &:hover{
+                transform: scale(0.9,0.9);
+                box-shadow: $hover-shadow;           
+            }
+
+            img{
+                border-radius: 20px;
+            }
+            h3{
+                position: absolute;
+                font-weight: bolder;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+/*------RESPONSIVE------ */
+@media screen and (max-width: 505px){
+    .perfumes-categorias{
+        width: 90%;
+        .perfumes-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 9%;
+            div{
+                h3{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
